@@ -3,7 +3,7 @@
   "title": "Handyfon's Dice Addiction",
   "description": "MORE DICE, MORE OPTIONS TO SHRATCH THE ITCH!",
   "author": "Handyfon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "minimumCoreVersion": "0.7.0",
   "compatibleCoreVersion": "0.8.8",
   "styles": ["css/diceaddiction.css"],
