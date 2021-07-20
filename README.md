@@ -1,5 +1,4 @@
 # diceaddiction
-<b>manifest: https://raw.githubusercontent.com/Handyfon/diceaddiction/main/module.json </b>
 
 <h2>Scratch your itch for digital dice.</h2>
 
