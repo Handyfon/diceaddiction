@@ -1,3 +1,6 @@
+<b>SUPPORT: https://discord.gg/gs5hAgxBx3</b></br>
+<b>My Modules: http://handyfon.net/foundry-modules/</b>
+
 # diceaddiction
 
 <h2>Scratch your itch for digital dice.</h2>
