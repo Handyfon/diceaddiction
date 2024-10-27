@@ -1,24 +1,33 @@
 {
-  "name": "diceaddiction",
   "title": "Handyfon's Dice Addiction",
   "description": "MORE DICE, MORE OPTIONS TO SHRATCH THE ITCH!",
-  "author": "Handyfon",
-  "version": "1.1.0",
-  "minimumCoreVersion": "0.7.0",
-  "compatibleCoreVersion": "0.8.8",
-  "styles": ["css/diceaddiction.css"],
-  "dependencies": [
-        {
-            "type": "module",
-            "name": "dice-so-nice"
-        }
-    ],
+  "version": "12.0",
+  "styles": [
+    "css/diceaddiction.css"
+  ],
   "scripts": [
-        "scripts/diceaddiction.js"
+    "scripts/diceaddiction.js"
   ],
   "url": "https://github.com/Handyfon/diceaddiction",
   "manifest": "https://raw.githubusercontent.com/Handyfon/diceaddiction/main/module.json",
-  "download": "https://raw.githubusercontent.com/Handyfon/diceaddiction/main/diceaddiction.zip"
+  "download": "https://raw.githubusercontent.com/Handyfon/diceaddiction/main/diceaddiction.zip",
+  "id": "diceaddiction",
+  "authors": [
+    {
+      "name": "Handyfon",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "dice-so-nice",
+        "type": "module"
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "10",
+    "verified": "12"
+  }
 }
-
-
