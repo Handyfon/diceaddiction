@@ -1,0 +1,35 @@
+=================================TEXTURES=================================
+carved 				 | https://polycount.com/profile/discussions/hykare
+cobble & darkcobble		 | https://besthqwallpapers.com/download/136398/1138x712
+fabulous & fabulousfire	         | https://unsplash.com/photos/Ih20hAlXBvw
+duality				 | https://unsplash.com/photos/6lQDFGOB1iw
+waves				 | https://unsplash.com/photos/yn97LNy0bao
+boiling				 | https://unsplash.com/photos/6oFEnsXHoqc
+aluminium 			 | https://unsplash.com/photos/ROPvvOCNe78
+sparks & bigsparks		 | https://unsplash.com/photos/0xVrOF1oaPU
+tab				 | https://unsplash.com/photos/y2dRSqTcVcg
+frozenLake			 | https://unsplash.com/photos/08lvM7w-G30
+valley				 | https://unsplash.com/photos/Apkr4nfK1mU
+valley2				 | https://unsplash.com/photos/Yhdabz-Q1PY
+matt				 | https://unsplash.com/de/fotos/6a3nqQ1YwBw
+khalil-musa-WzFBUXQChFU-unsplash.jpg				 | https://unsplash.com/de/fotos/WzFBUXQChFU
+
+
+///// Unsplash License: https://unsplash.com/license /// Can be used for non-commercial purposes
+
+=================================NOn COMMERCIAL (NON PROFIT) FONTS=================================
+
+==========================https://weknow.deviantart.com==========================
+- SomethingLight-L3VAD.ttf
+==========================https://www.dafont.com/==========================
+Castal_Street.ttf 		- https://www.dafont.com/de/castal-street.font
+wet1_becker.ttf -		- https://www.dafont.com/de/wet1-becker.font
+chp-fire.ttf			- https://www.dafont.com/de/cheap-fire.font
+Jade_20Monkey_20BTN.ttf		- https://www.azfonts.de/load_font/jade-monkey-btn.html
+Lumberjack_Rough.otf		- http://www.myfont.de/fonts/infos/6712-Lumberjack-Inline-Rough.html
+
+
+=================================FREE COMMERCIAL USE FONTS=================================
+IMMRTLT_.ttf			- https://fontsov.com/font/immortal---alternates-41.html
+
+==============Google FONTS==============

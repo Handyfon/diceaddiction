@@ -1,13 +1,9 @@
 {
   "title": "Handyfon's Dice Addiction",
   "description": "MORE DICE, MORE OPTIONS TO SHRATCH THE ITCH!",
-  "version": "12.2.1",
-  "styles": [
-    "css/diceaddiction.css"
-  ],
-  "scripts": [
-    "scripts/diceaddiction.js"
-  ],
+  "version": "13.1",
+  "styles": ["css/diceaddiction.css"],
+  "scripts": ["scripts/diceaddiction.js"],
   "url": "https://github.com/Handyfon/diceaddiction",
   "manifest": "https://raw.githubusercontent.com/Handyfon/diceaddiction/main/module.json",
   "download": "https://raw.githubusercontent.com/Handyfon/diceaddiction/main/diceaddiction.zip",
@@ -22,12 +18,13 @@
     "requires": [
       {
         "id": "dice-so-nice",
-        "type": "module"
+        "type": "module",
+        "compatibility": {}
       }
     ]
   },
   "compatibility": {
     "minimum": "10",
-    "verified": "12"
+    "verified": "13"
   }
 }
