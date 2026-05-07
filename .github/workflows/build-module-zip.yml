@@ -99,7 +99,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: module-zip
-          path: dist/module.zip
+          path: |
+            dist/module.json
+            dist/module.zip
           if-no-files-found: error
 
       - name: Create GitHub release
