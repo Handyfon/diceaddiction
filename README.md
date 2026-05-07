@@ -1,5 +1,4 @@
-<b>SUPPORT: https://discord.gg/gs5hAgxBx3</b></br>
-<b>My Modules: http://handyfon.net/foundry-modules/</b>
+<b>SUPPORT: [https://discord.gg/gs5hAgxBx3](https://discord.gg/MqFqYDJK6e)</b></br>
 
 # diceaddiction
 
