@@ -18,12 +18,14 @@ jobs:
 
       - name: Create module.zip
         run: |
-          mkdir package
-          unzip -q diceaddiction.zip -d package
-          cp module.json package/module.json
-          cp "Used Assets Credits.txt" "package/Used Assets Credits.txt"
-          cd package
-          zip -r ../module.zip .
+          zip -r module.zip \
+            module.json \
+            "Used Assets Credits.txt" \
+            css \
+            faces \
+            fonts \
+            scripts \
+            textures
 
       - name: Upload module.zip
         uses: actions/upload-artifact@v4

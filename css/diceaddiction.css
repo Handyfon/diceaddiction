@@ -1,0 +1,11 @@
+#prosemirror-dropdown ul {
+    max-height: 400px;
+}
+#prosemirror-dropdown > ul {
+    display: block;
+    overflow: auto;
+}
+#prosemirror-dropdown > ul:has(li ul) {
+    display: block;
+    overflow: visible !important;
+}
