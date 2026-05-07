@@ -21,12 +21,13 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Read module version
+      - name: Read module metadata
         id: version
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          package_id="$(node -p "require('./module.json').id")"
           version="$(node -p "require('./module.json').version")"
           tag="v${version}"
           release=false
@@ -40,10 +41,15 @@ jobs:
             release=true
           elif [ "${{ github.event_name }}" = "push" ]; then
             before="${{ github.event.before }}"
+            changed_files=""
             previous_version=""
 
             if git cat-file -e "${before}:module.json" 2>/dev/null; then
               previous_version="$(git show "${before}:module.json" | node -e "let data=''; process.stdin.on('data', chunk => data += chunk); process.stdin.on('end', () => console.log(JSON.parse(data).version));")"
+            fi
+
+            if git cat-file -e "${before}^{commit}" 2>/dev/null; then
+              changed_files="$(git diff --name-only "$before" HEAD)"
             fi
 
             if [ "$version" != "$previous_version" ]; then
@@ -53,8 +59,13 @@ jobs:
             if [ "$release_exists" = "false" ]; then
               release=true
             fi
+
+            if printf '%s\n' "$changed_files" | grep -qx ".github/workflows/build-module-zip.yml"; then
+              release=true
+            fi
           fi
 
+          echo "package-id=$package_id" >> "$GITHUB_OUTPUT"
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
           echo "release=$release" >> "$GITHUB_OUTPUT"
@@ -109,6 +120,6 @@ jobs:
         with:
           username: ${{ secrets.FOUNDRY_ADMIN_USERNAME }}
           password: ${{ secrets.FOUNDRY_ADMIN_PASSWORD }}
-          module-id: ${{ secrets.FOUNDRY_ADMIN_MODULE_ID }}
+          module-id: ${{ steps.version.outputs.package-id }}
           manifest-url: https://github.com/${{ github.repository }}/releases/download/${{ steps.version.outputs.tag }}/module.json
           manifest-file: dist/module.json
