@@ -92,7 +92,7 @@ jobs:
 
       - name: Publish release to FoundryVTT
         if: steps.version.outputs.release == 'true'
-        uses: Varriount/fvtt-autopublish@latest
+        uses: Varriount/fvtt-autopublish@v2.0.2
         with:
           username: ${{ secrets.FOUNDRY_ADMIN_USERNAME }}
           password: ${{ secrets.FOUNDRY_ADMIN_PASSWORD }}
