@@ -9,3 +9,270 @@
     display: block;
     overflow: visible !important;
 }
+
+#dice-config #dice-configuration-canvas-container {
+    position: sticky !important;
+    top: 0;
+    z-index: 25;
+    margin: 0 0 8px;
+    padding: 0 0 8px;
+    background: var(--color-bg-window, var(--background, #f0f0e0));
+    box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.65);
+}
+
+.dice-addiction-emission-settings {
+    margin: 10px 0;
+    padding: 10px 12px;
+    border: 1px solid rgba(209, 164, 52, 0.8);
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgba(33, 28, 13, 0.92), rgba(16, 14, 10, 0.9));
+    color: #f2d78a;
+}
+
+.dice-addiction-emission-settings h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(209, 164, 52, 0.45);
+    color: #f5d77a;
+    font-size: 1.05em;
+    line-height: 1.2;
+}
+
+.dice-addiction-capture-actions {
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 4px;
+}
+
+.dice-addiction-gif-capture {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 22px;
+    min-height: 22px;
+    padding: 0;
+    border: 1px solid rgba(245, 215, 122, 0.75);
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #f5d77a;
+    line-height: 1;
+}
+
+.dice-addiction-gif-capture:hover,
+.dice-addiction-gif-capture:focus {
+    border-color: #f8e3a0;
+    background: rgba(65, 49, 8, 0.85);
+    color: #fff0b8;
+    box-shadow: 0 0 5px rgba(245, 215, 122, 0.45);
+}
+
+.dice-addiction-gif-capture.is-capturing {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.dice-addiction-presets-app {
+    overflow: visible !important;
+}
+
+.dice-addiction-presets {
+    position: absolute;
+    top: 48px;
+    left: 100%;
+    z-index: 120;
+    width: 318px;
+    pointer-events: none;
+}
+
+.dice-addiction-presets__toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 36px;
+    height: 116px;
+    min-height: 116px;
+    padding: 6px 4px;
+    border: 1px solid rgba(209, 164, 52, 0.9);
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    background: linear-gradient(180deg, #14100a, #2a210d);
+    color: #f5d77a;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    pointer-events: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    transition: left 140ms ease, box-shadow 140ms ease;
+}
+
+.dice-addiction-presets.is-open .dice-addiction-presets__toggle {
+    left: 282px;
+}
+
+.dice-addiction-presets__toggle:hover,
+.dice-addiction-presets__toggle:focus {
+    color: #fff0b8;
+    border-color: #f8e3a0;
+    box-shadow: 0 0 8px rgba(245, 215, 122, 0.45);
+}
+
+.dice-addiction-presets__panel {
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+    max-height: min(520px, calc(100vh - 135px));
+    margin-left: 0;
+    border: 1px solid rgba(209, 164, 52, 0.85);
+    border-radius: 0 6px 6px 0;
+    background: linear-gradient(180deg, rgba(24, 19, 10, 0.98), rgba(8, 8, 7, 0.98));
+    color: #f2d78a;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-8px);
+    transition: opacity 140ms ease, transform 140ms ease, visibility 0s linear 140ms;
+    pointer-events: none;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+.dice-addiction-presets.is-open .dice-addiction-presets__panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition-delay: 0s;
+    pointer-events: auto;
+}
+
+.dice-addiction-presets__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 9px 10px;
+    border-bottom: 1px solid rgba(209, 164, 52, 0.42);
+}
+
+.dice-addiction-presets__header h3 {
+    margin: 0;
+    color: #f5d77a;
+    font-size: 1.05em;
+    line-height: 1.2;
+}
+
+.dice-addiction-presets__header button,
+.dice-addiction-presets__delete {
+    width: 26px;
+    min-width: 26px;
+    height: 24px;
+    min-height: 24px;
+    padding: 0;
+    border: 1px solid rgba(209, 164, 52, 0.55);
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.35);
+    color: #f5d77a;
+}
+
+.dice-addiction-presets__save {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(209, 164, 52, 0.26);
+}
+
+.dice-addiction-presets__save label {
+    color: #d9bd67;
+    font-size: 0.9em;
+}
+
+.dice-addiction-presets__save input {
+    width: 100%;
+    border: 1px solid rgba(209, 164, 52, 0.45);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.38);
+    color: #f8e3a0;
+}
+
+.dice-addiction-presets__save button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 28px;
+    border: 1px solid rgba(209, 164, 52, 0.75);
+    border-radius: 4px;
+    background: rgba(68, 50, 10, 0.78);
+    color: #fff0b8;
+}
+
+.dice-addiction-presets__io {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.dice-addiction-presets__io button {
+    min-width: 0;
+    font-size: 0.86em;
+}
+
+.dice-addiction-presets__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.dice-addiction-presets__empty {
+    margin: 0;
+    color: rgba(242, 215, 138, 0.72);
+    font-size: 0.9em;
+}
+
+.dice-addiction-presets__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 6px;
+    border: 1px solid rgba(209, 164, 52, 0.28);
+    border-radius: 5px;
+    background: rgba(255, 213, 93, 0.06);
+}
+
+.dice-addiction-presets__text {
+    display: grid;
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 2px;
+}
+
+.dice-addiction-presets__load {
+    min-width: 0;
+    min-height: 22px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #f8e3a0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dice-addiction-presets__load:hover,
+.dice-addiction-presets__load:focus {
+    color: #fff7cf;
+    text-shadow: 0 0 5px rgba(245, 215, 122, 0.45);
+}
+
+.dice-addiction-presets__meta {
+    color: rgba(242, 215, 138, 0.58);
+    font-size: 0.78em;
+}
